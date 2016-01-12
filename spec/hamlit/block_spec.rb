@@ -17,4 +17,36 @@ describe Hamlit::Block do
       HAML
     end
   end
+
+  describe 'script' do
+    it 'does not escape script by default' do
+      assert_render(<<-HTML.unindent, <<-HAML.unindent)
+        <script>
+      HTML
+        = "<script>"
+      HAML
+    end
+
+    it 'does not render contents inside block' do
+      assert_render("3", <<-HAML.unindent)
+        = 3.times do |i|
+          = i
+      HAML
+    end
+
+    specify 'script contents is available via `yield`' do
+      assert_render(<<-HTML.unindent.rstrip, <<-'HAML'.unindent)
+        <form>
+        <span>
+        hello world
+        </span>
+        </form>
+      HTML
+        - def form; "<form>\n#{yield}</form>"; end
+        = form do
+          %span
+            hello world
+      HAML
+    end
+  end
 end
