@@ -1,11 +1,20 @@
 require 'spec_helper'
 
 describe Hamlit::Block do
-  it 'has a version number' do
-    expect(Hamlit::Block::VERSION).not_to be nil
+  def assert_render(html, haml)
+    expect(eval Hamlit::Engine.new.call(haml)).to eq(html)
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe 'silent script' do
+    it 'works normally' do
+      assert_render(<<-HTML.unindent, <<-HAML.unindent)
+        0
+        1
+        2
+      HTML
+        - 3.times do |i|
+          = i
+      HAML
+    end
   end
 end

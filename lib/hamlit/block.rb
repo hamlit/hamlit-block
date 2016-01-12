@@ -1,3 +1,4 @@
+require "hamlit"
 require "hamlit/block/version"
 
 module Hamlit
