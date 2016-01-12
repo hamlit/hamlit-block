@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Hamlit extension to support capturing via yield}
   spec.description   = %q{Hamlit extension to support capturing via yield}
-  spec.homepage      = "https://github.com/k0kubun/hamlit-block"
+  spec.homepage      = "https://github.com/hamlit/hamlit-block"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
