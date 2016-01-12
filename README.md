@@ -1,5 +1,7 @@
 # Hamlit::Block
 
+Hamlit extension to support capturing via yield
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -14,7 +16,7 @@ And then execute:
 
 ## Usage
 
-Basically the same as Hamlit. Contents inside script block is not rendered but available via `yield`.
+Basically the same as Hamlit. `require 'hamlit/block'` may be necessary. Contents inside script block is not rendered but available via `yield`.
 
 ## License
 
