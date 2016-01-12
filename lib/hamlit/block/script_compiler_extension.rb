@@ -10,7 +10,7 @@ module Hamlit
            [:block, "#{var} = #{node.value[:text]}",
             [:multi,
              [:newline],
-             [:capture, var, yield(node)],
+             [:capture, @identity.generate, yield(node)],
             ],
            ],
           ]
