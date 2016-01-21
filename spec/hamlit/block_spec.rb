@@ -6,14 +6,28 @@ describe Hamlit::Block do
   end
 
   describe 'silent script' do
-    it 'works normally' do
-      assert_render(<<-HTML.unindent, <<-HAML.unindent)
-        0
-        1
-        2
-      HTML
+    it 'does not render contents inside block' do
+      assert_render("", <<-HAML.unindent)
         - 3.times do |i|
           = i
+      HAML
+    end
+
+    specify 'block script contents are available via `yield`' do
+      assert_render(<<-HTML.unindent, <<-'HAML'.unindent)
+        hey
+        <form>
+        <span>
+        hello world
+        </span>
+        </form>
+      HTML
+        - def form; "<form>\n#{yield}</form>"; end
+        - result = form do
+          %span
+            hello world
+        hey
+        = result
       HAML
     end
   end
@@ -34,7 +48,7 @@ describe Hamlit::Block do
       HAML
     end
 
-    specify 'script contents is available via `yield`' do
+    specify 'script contents are available via `yield`' do
       assert_render(<<-HTML.unindent.rstrip, <<-'HAML'.unindent)
         <form>
         <span>
