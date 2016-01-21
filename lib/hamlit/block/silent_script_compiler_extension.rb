@@ -1,7 +1,7 @@
 module Hamlit
   module Block
-    # Suppress block's internal rendering result and pass it to [:capture, ...].
-    # if it script is `do .. end` block
+    # Suppress block's internal rendering result and pass it to [:capture, ...]
+    # if the silent script is `do .. end` block
     module SilentScriptCompilerExtension
       attr_writer :identity
 
