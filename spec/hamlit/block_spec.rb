@@ -6,6 +6,15 @@ describe Hamlit::Block do
   end
 
   describe 'silent script' do
+    it 'works normally for non-block silent script' do
+      assert_render(<<-HTML.unindent, <<-HAML.unindent)
+        hello world
+      HTML
+        - if true
+          hello world
+      HAML
+    end
+
     it 'does not render contents inside block' do
       assert_render("", <<-HAML.unindent)
         - 3.times do |i|
