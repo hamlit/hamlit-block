@@ -18,7 +18,7 @@ And then execute:
 
 Basically the same as Hamlit. `require 'hamlit/block'` may be necessary. Contents inside script block is not rendered but available via `yield`. 
 
-Test code [instead usage example](https://github.com/hamlit/hamlit-block/blob/master/spec/hamlit/block_spec.rb)
+See [spec](spec/hamlit/block_spec.rb) for detail.
 
 ## License
 
