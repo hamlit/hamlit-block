@@ -2,8 +2,10 @@ module Hamlit
   module Block
     # Suppress block's internal rendering result and pass it to [:capture, ...]
     # if the silent script is `do .. end` block
-    module SilentScriptCompilerExtension
-      attr_writer :identity
+    class SilentScriptCompiler < ::Hamlit::Compiler::SilentScriptCompiler
+      def initialize(identity)
+        @identity = identity
+      end
 
       BLOCK_REGEX = /do(\s*\|\s*[^\|]*\s*\|)?\s*\z/
 

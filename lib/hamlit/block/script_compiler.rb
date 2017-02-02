@@ -1,9 +1,7 @@
 module Hamlit
   module Block
     # Suppress block's internal rendering result and pass it to [:capture, ...].
-    module ScriptCompilerExtension
-      attr_reader :identity
-
+    class ScriptCompiler < ::Hamlit::Compiler::ScriptCompiler
       def compile_script_assign(var, node, &block)
         if node.children.empty?
           super
