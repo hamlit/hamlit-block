@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Hamlit::Block do
   def assert_render(html, haml)
-    expect(eval Hamlit::Engine.new.call(haml)).to eq(html)
+    expect(eval Hamlit::Block::Engine.new.call(haml)).to eq(html)
   end
 
   describe 'silent script' do

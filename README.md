@@ -16,7 +16,7 @@ And then execute:
 
 ## Usage
 
-Basically the same as Hamlit. `require 'hamlit/block'` may be necessary. Contents inside script block is not rendered but available via `yield`. 
+Use `Hamlit::Block::Engine` instead of `Hamlit::Engine`. Contents inside script block is not rendered but available via `yield`.
 
 See [spec](spec/hamlit/block_spec.rb) for detail.
 
