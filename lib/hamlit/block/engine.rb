@@ -1,4 +1,5 @@
 require 'hamlit/engine'
+require 'hamlit/block/compiler'
 
 module Hamlit
   module Block
@@ -17,7 +18,7 @@ module Hamlit
       )
 
       use Hamlit::Parser
-      use Hamlit::Compiler
+      use Hamlit::Block::Compiler
       use Hamlit::HTML
       use Hamlit::StringSplitter
       use Hamlit::StaticAnalyzer
