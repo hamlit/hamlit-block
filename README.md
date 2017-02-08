@@ -20,6 +20,14 @@ Use `Hamlit::Block::Engine` instead of `Hamlit::Engine`. Contents inside script 
 
 See [spec](spec/hamlit/block_spec.rb) for detail.
 
+### For Tilt
+
+```rb
+require 'hamlit/block'
+```
+
+would be enough. It will override :haml registration of Tilt with `Hamlit::Block::Template` automatically.
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
