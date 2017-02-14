@@ -21,7 +21,7 @@ module Hamlit
       use Hamlit::Block::Compiler
       use Hamlit::HTML
       use Hamlit::StringSplitter
-      use Hamlit::StaticAnalyzer
+      filter :StaticAnalyzer
       use Hamlit::Escapable
       use Hamlit::ForceEscapable
       filter :ControlFlow
