@@ -20,7 +20,7 @@ module Hamlit
       use Hamlit::Parser
       use Hamlit::Block::Compiler
       use Hamlit::HTML
-      use Hamlit::StringSplitter
+      filter :StringSplitter
       filter :StaticAnalyzer
       use Hamlit::Escapable
       use Hamlit::ForceEscapable
