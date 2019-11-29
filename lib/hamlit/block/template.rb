@@ -15,7 +15,7 @@ module Hamlit
   module Block
     Template = Temple::Templates::Tilt.create(
       Hamlit::Block::Engine,
-      register_as: :haml,
+      register_as: [:haml, :hamlit],
     )
 
     module TemplateExtension
