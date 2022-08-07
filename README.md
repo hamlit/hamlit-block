@@ -1,5 +1,12 @@
 # Hamlit::Block
 
+Note: This was made for Hamlit v2 and older.
+From Hamlit v3, this is the default behavior outside Rails.
+
+**Please use Hamlit v3 or older instead.**
+
+---
+
 Hamlit extension to support capturing via yield
 
 ## Installation
