@@ -1,6 +1,6 @@
 require "hamlit"
 # In Hamlit 2.16.1+, ScriptCompiler#initialize takes the second argument
-# and the following code stops working.
+# and the following code stops working. So it's ignored.
 #
 # Two ways to fix it:
 # * [Recommended] Use Hamlit 3+. Its Tilt integration works like hamlit-block by default.
