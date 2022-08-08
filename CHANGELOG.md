@@ -1,3 +1,7 @@
+## v0.8.0
+
+- Disable hamlit/block for Hamlit 2.16.1+
+
 ## v0.7.1
 
 - Register `Hamlit::Block::Template` as :hamlit as well

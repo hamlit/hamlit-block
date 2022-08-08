@@ -1,6 +1,6 @@
 module Hamlit
   module Block
-    VERSION = "0.7.1"
+    VERSION = "0.8.0"
 
     begin
       require 'cell/hamlit/version'
